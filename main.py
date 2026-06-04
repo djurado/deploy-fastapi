@@ -9,3 +9,8 @@ def hola_mundo():
 @app.get("/")
 def root():
     return {"message": "Bienvenido a mi API"}
+
+@app.get("/suma")
+def sumar(a:int, b:int):
+    return {"resultado": f"{a} + {b} = {a+b}"}
+
