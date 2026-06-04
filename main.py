@@ -23,6 +23,10 @@ def restar(a:int, b:int):
 def obtener_clave():
     return {"clave": f"{settings.clave_secreta.get_secret_value()}"}
 
+@app.get("/db_secreta")
+def obtener_db():
+    return {"db": f"{settings.database_url}"}
+
 @app.get("/titulo_api")
 def obtener_titulo():
     return {"titulo": f"{settings.title_api}"}
